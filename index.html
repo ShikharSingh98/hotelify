@@ -5,12 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotelify</title>
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    Hotelify
+    <header class="header">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#22bfc8" viewBox="0 0 256 256" class="logo__img">
+          <rect width="256" height="256" fill="none"></rect>
+          <path
+            d="M213.4,109.6l-80-72.7a8,8,0,0,0-10.8,0l-80,72.7a8.3,8.3,0,0,0-2.6,5.9V208a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V115.5A8.3,8.3,0,0,0,213.4,109.6Z"
+            fill="none"
+            stroke="#22bfc8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></path>
+        </svg>
+        <span class="logo__text">Hotelify</span>
+      </div>
+      <form action="#" class="search">
+        <input type="text" placeholder="Search hotels" class="search__input" />
+        <button class="search__button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#22bfc8" viewBox="0 0 256 256" class="search__button__icon">
+            <rect width="256" height="256" fill="none"></rect>
+            <circle cx="116" cy="116" r="84" fill="none" stroke="#22bfc8" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+            <line x1="175.4" y1="175.4" x2="224" y2="224" fill="none" stroke="#22bfc8" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          </svg>
+        </button>
+      </form>
+      <div class="user__navigation">
+        <div class="user-navigation__icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#22bfc8" viewBox="0 0 256 256" class="user-navigation__icon">
+            <rect width="256" height="256" fill="none"></rect>
+            <path d="M192,224l-64-40L64,224V48a8,8,0,0,1,8-8H184a8,8,0,0,1,8,8Z" fill="none" stroke="#22bfc8" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+            <polyline points="192 176 128 136 64 176" fill="none" stroke="#22bfc8" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+          </svg>
+          <span class="user-navigation__icon-text">7</span>
+        </div>
+        <div class="user-navigation__icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#22bfc8" viewBox="0 0 256 256" class="user-navigation__icon">
+            <rect width="256" height="256" fill="none"></rect>
+            <path d="M71.6,144,32,176V48a8,8,0,0,1,8-8H168a8,8,0,0,1,8,8v88a8,8,0,0,1-8,8Z" fill="none" stroke="#22bfc8" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+            <path d="M80,144v40a8,8,0,0,0,8,8h96.4L224,224V96a8,8,0,0,0-8-8H176" fill="none" stroke="#22bfc8" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+          </svg>
+          <span class="user-navigation__icon-text">12</span>
+        </div>
+        <div class="user-navigation__icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="#22bfc8" viewBox="0 0 256 256" class="user-navigation__icon">
+            <rect width="256" height="256" fill="none"></rect>
+            <circle cx="128" cy="96" r="64" fill="none" stroke="#22bfc8" stroke-miterlimit="10" stroke-width="16"></circle>
+            <path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke="#22bfc8" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+          </svg>
+          <span>Shikhar</span>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <nav class="content__sidebar">Sidebar</nav>
+      <main class="content__hotels">Hotels</main>
+    </div>
   </body>
 </html>
