@@ -1,15 +1,8 @@
 :root {
-  --color-primary: #22b8cf;
-  --color-primary-dark: #1098ad;
-  --color-primary-light: #66d9e8;
-
-  --color-gray-light-1: #f1f3f5;
-  --color-gray-light-2: #e9ecef;
-  --color-gray-light-3: #dee2e6;
-
-  --color-gray-dark-1: #adb5bd;
-  --color-gray-dark-2: #495057;
-  --color-gray-dark-3: #212529;
+  --color-dark-blue: #112d4e;
+  --color-light-blue: #3f72af;
+  --color-dark-grey: #dbe2ef;
+  --color-light-grey: #f9f7f7;
 }
 
 * {
@@ -37,7 +30,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  padding: 1.5rem 0;
+  color: var(--color-dark-blue);
+  border-bottom: 2px solid var(--color-light-grey);
 }
 
 .logo {
@@ -55,7 +50,6 @@ body {
 .logo__text {
   font-family: 'Righteous', cursive;
   font-size: 2.5rem;
-  color: var(--color-primary);
 }
 
 .search {
@@ -69,7 +63,7 @@ body {
   width: 75%;
   border: none;
   outline: none;
-  background-color: var(--color-gray-light-1);
+  background-color: var(--color-light-grey);
   padding: 1rem 2.5rem;
   border-radius: 100px;
   margin-right: -3rem;
@@ -79,7 +73,7 @@ body {
 .search__button {
   border: none;
   outline: none;
-  background-color: var(--color-gray-light-1);
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -90,11 +84,7 @@ body {
 
 .search__input:focus {
   width: 100%;
-  background-color: var(--color-gray-light-2);
-}
-
-.search__input:focus + .search__button {
-  background-color: var(--color-gray-light-2);
+  background-color: var(--color-dark-grey);
 }
 
 .user__navigation {
@@ -120,25 +110,74 @@ body {
   text-align: center;
   height: 1.5rem;
   width: 1.5rem;
-  background-color: var(--color-primary);
+  background-color: var(--color-light-blue);
   color: #fff;
   border-radius: 100%;
   position: absolute;
-  top: 0.7rem;
+  top: 0.2rem;
   left: 1.7rem;
 }
 
 .content {
   display: flex;
-  color: white;
 }
 
-.content__sidebar {
-  background-color: var(--color-gray-dark-3);
+.sidebar {
   flex: 0 0 20rem;
+  padding: 5rem 0;
+  background-color: var(--color-light-grey);
 }
 
-.content__hotels {
-  background-color: var(--color-primary-dark);
+.sidebar-nav__item {
+  list-style: none;
+  padding: 1.5rem 2.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar-nav__item:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.sidebar-nav__item::before {
+  content: '';
+  height: 100%;
+  width: 0.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+  background-color: var(--color-dark-grey);
+}
+
+.sidebar-nav__item:hover::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+
+.sidebar-nav__link:link,
+.sidebar-nav__link:visited {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.7rem;
+}
+
+.sidebar-nav__icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.sidebar-nav__text {
+  color: var(--color-dark-blue);
+  margin-left: 1rem;
+}
+
+.hotels-view {
   flex: 1;
+  height: 90vh;
 }
